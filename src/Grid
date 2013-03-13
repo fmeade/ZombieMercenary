@@ -4,7 +4,7 @@ public Grid()
 {
 //insert Array of players here
 }
-//collision detection here? Something like this-->   public boolean isColidingWith(){} returns true if two players collide   
+//collision detection here? Something like this-->   public boolean isCollidingWith(){} returns true if two players collide   
 
 
 }
