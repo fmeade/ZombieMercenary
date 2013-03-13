@@ -2,6 +2,6 @@
  *
  * @author Meade & Zepp 
  */
-public class Zombie {
+public class Zombie extends Player{
     
 }
