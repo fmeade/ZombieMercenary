@@ -2,6 +2,6 @@
  *
  * @author Meade & Zepp
  */
-public class Mercenary {
+public class Mercenary extends Player{
     
 }
