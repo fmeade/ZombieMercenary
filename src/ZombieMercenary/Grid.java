@@ -7,15 +7,24 @@ package ZombieMercenary;
 public class Grid {
 
 //Background Image?
-    Player[] players;
+    Player mercenary;
+    Player[] zombies;
 
     public Grid() {
-        players = new Player[10];
+        mercenary = new Player();
+        zombies = new Player[50];
     }
 //collision detection here? Something like this-->   public boolean isCollidingWith(){} returns true if two players collide
 
     public boolean isCollidingWith() {
-        return true;
+        for(int i=0;i<zombies.length;i++)
+        {
+            if()
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
 // methods to get and set location of players -->  public float getX(Player){returns a float of the players position
