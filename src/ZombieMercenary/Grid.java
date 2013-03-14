@@ -4,21 +4,39 @@ package ZombieMercenary;
  *
  * @author Meade & Zepp
  */
-public class Grid{
+public class Grid {
 
 //Background Image?
+    Player[] players;
 
-public Grid()
-{
-//insert Array of players here
-}
-//collision detection here? Something like this-->   public boolean isCollidingWith(){} returns true if two players collide   
+    public Grid() {
+        players = new Player[10];
+    }
+//collision detection here? Something like this-->   public boolean isCollidingWith(){} returns true if two players collide
+
+    public boolean isCollidingWith() {
+        return true;
+    }
 
 // methods to get and set location of players -->  public float getX(Player){returns a float of the players position
 // on the X-axis}
+    public int getX(Player p) {
+        int x = 0;
+        //x = p.locationX();
+        return x;
+    }
 // same thing for Y value
 
+    public int getY(Player p) {
+        int y = 0;
+        //y = p.locationY();
+        return y;
+    }
+
 // method to set location    public void setLocation(getX(),getY()){}
+    public void setLocation() {
+        
+    }
 
 
 
