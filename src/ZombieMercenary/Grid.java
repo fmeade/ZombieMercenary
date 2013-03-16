@@ -19,7 +19,7 @@ public class Grid {
     public boolean isCollidingWith() {
         for(int i=0;i<zombies.length;i++)
         {
-            if()
+            //if()
             {
                 return true;
             }

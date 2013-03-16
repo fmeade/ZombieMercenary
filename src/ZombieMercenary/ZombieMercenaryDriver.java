@@ -1,5 +1,7 @@
 package ZombieMercenary;
 
+import org.newdawn.slick.SlickException;
+
 
 /**
  *
