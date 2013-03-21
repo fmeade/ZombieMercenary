@@ -7,12 +7,12 @@ package ZombieMercenary;
 public class Grid {
 
 //Background Image?
-    Player mercenary;
-    Player[] zombies;
+    Mercenary mercenary;
+    Zombie[] zombies;
 
     public Grid() {
-        mercenary = new Player();
-        zombies = new Player[50];
+        mercenary = new Mercenary();
+        zombies = new Zombie[50];
     }
 //collision detection here? Something like this-->   public boolean isCollidingWith(){} returns true if two players collide
 

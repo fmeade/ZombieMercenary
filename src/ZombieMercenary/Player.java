@@ -3,6 +3,7 @@ package ZombieMercenary;
  /**
  * @author Meade & Zepp 
  */
-public class Player {
-     
+public class Player 
+{
+    
 }
