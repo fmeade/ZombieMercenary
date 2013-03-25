@@ -26,24 +26,42 @@ public class Grid {
         }
         return false;
     }
-
-// methods to get and set location of players -->  public float getX(Player){returns a float of the players position
-// on the X-axis}
-    public int getX(Player p) {
-        int x = 0;
-        //x = p.locationX();
-        return x;
+    
+    
+    /*
+     * get position methods for Zombies.
+     */
+    public float getX(Zombie p) { 
+        float playerX = p.getLocationX();
+        return playerX;
     }
-// same thing for Y value
-
-    public int getY(Player p) {
-        int y = 0;
-        //y = p.locationY();
+    
+    
+    public float getY(Zombie p) {
+        float y = p.getLocationY();
         return y;
     }
-
+    
+    
+    
+    /*
+     * get position methods for mercenary.
+     */
+    public float getX(Mercenary p) { 
+        float playerX = p.getLocationX();
+        return playerX;
+    }
+    
+    
+    public float getY(Mercenary p) { 
+        float playerY = p.getLocationY();
+        return playerY;
+    }
 // method to set location    public void setLocation(getX(),getY()){}
     public void setLocation() {
+        
+        
+        
         
     }
 

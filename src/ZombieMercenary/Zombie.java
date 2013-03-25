@@ -11,16 +11,8 @@ public class Zombie extends Player
     
     public Zombie()
     {
-        locationX = 500;
-        locationY = 500;
+        setLocationX(500);
+        setLocationY(500);
     }
-    
-    public float getLocationX()
-    {
-        return locationX;
-    }
-    public float getLocationY()
-    {
-        return locationY;
-    }
+   
 }
