@@ -30,9 +30,9 @@ public class SlickBasicGame extends BasicGame{
  
     @Override
     public void init(GameContainer gc) throws SlickException {
-        mercenaryImage = new Image("/Users/forrest_meade/Documents/RU/Freshman2/Itec220/NetBeansProjects/Project5/resources/mercenary.png");
-        landImage = new Image("/Users/forrest_meade/Documents/RU/Freshman2/Itec220/NetBeansProjects/Project5/resources/LoadingScreen.png");
-        zombieImage = new Image("/Users/forrest_meade/Documents/RU/Freshman2/Itec220/NetBeansProjects/Project5/resources/zombie.png");
+        mercenaryImage = new Image("resources/mercenary.png");
+        landImage = new Image("resources/LoadingScreen.png");
+        zombieImage = new Image("resources/zombie.png");
     }
  
     @Override
