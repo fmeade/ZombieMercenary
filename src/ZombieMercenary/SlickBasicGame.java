@@ -7,17 +7,21 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
+import ZombieMercenary.Constants;
  
 public class SlickBasicGame extends BasicGame{
  
-    private Image mercenary = null;
-    private Image land = null;
-    private Image zombie = null;
-    private float x = 0;
-    private float y = 500;
-    private float x1 = 500;
-    private float y1 = 500;
-    private float scale = 2.0f;
+    private Mercenary mercenary = new Mercenary();
+    private Zombie zombie = new Zombie();
+    private Constants constants = new Constants();
+    private Image mercenaryImage = null;
+    private Image landImage = null;
+    private Image zombieImage = null;
+    private float mercenaryX = mercenary.getLocationX();
+    private float mercenaryY = mercenary.getLocationY();
+    private float zombieX = zombie.getLocationX();
+    private float zombieY = zombie.getLocationY();
+    private float scale = constants.getScale();
  
     public SlickBasicGame()
     {
@@ -26,9 +30,9 @@ public class SlickBasicGame extends BasicGame{
  
     @Override
     public void init(GameContainer gc) throws SlickException {
-        mercenary = new Image("/Users/forrest_meade/Documents/RU/Freshman2/Itec220/NetBeansProjects/Project5/resourcesmercenary.png");
-        land = new Image("/Users/forrest_meade/Documents/RU/Freshman2/Itec220/NetBeansProjects/Project5/resources/LoadingScreen.png");
-        zombie = new Image("/Users/forrest_meade/Documents/RU/Freshman2/Itec220/NetBeansProjects/Project5/resources/zombie.png");
+        mercenaryImage = new Image("/Users/forrest_meade/Documents/RU/Freshman2/Itec220/NetBeansProjects/Project5/resources/mercenary.png");
+        landImage = new Image("/Users/forrest_meade/Documents/RU/Freshman2/Itec220/NetBeansProjects/Project5/resources/LoadingScreen.png");
+        zombieImage = new Image("/Users/forrest_meade/Documents/RU/Freshman2/Itec220/NetBeansProjects/Project5/resources/zombie.png");
     }
  
     @Override
@@ -36,35 +40,35 @@ public class SlickBasicGame extends BasicGame{
     {
         Input input = gc.getInput();
         
-        if(x1 < x)
+        if(zombieX < mercenaryX)
         {
-            x1+=0.1f;
+            zombieX+=0.1f;
         }
         
-        if(x1 > x)
+        if(zombieX > mercenaryX)
         {
-            x1-=0.1f;
+            zombieX-=0.1f;
         }
         
-        if(y1 < y)
+        if(zombieY < mercenaryY)
         {
-            y1+=0.1f;
+            zombieY+=0.1f;
         }
         
-        if(y1 > y)
+        if(zombieY > mercenaryY)
         {
-            y1-=0.1f;
+            zombieY-=0.1f;
         }
  
-        if(input.isKeyDown(Input.KEY_A) && mercenary.getHeight() <= 800)
+        if(input.isKeyDown(Input.KEY_A) && mercenaryImage.getHeight() <= 800)
         {
-            x-= .5f;
+            mercenaryX-= .5f;
             //plane.rotate(-0.2f * delta);
         }
  
-        if(input.isKeyDown(Input.KEY_D) && mercenary.getHeight() >= 0)
+        if(input.isKeyDown(Input.KEY_D) && mercenaryImage.getHeight() >= 0)
         {
-            x+= .5f;
+            mercenaryX+= .5f;
             //aplane.rotate(0.2f * delta);
         }
  
@@ -73,7 +77,7 @@ public class SlickBasicGame extends BasicGame{
             //float hip = 0.4f * delta;
  
             //float rotation = plane.getRotation();
-            y-= .5f;
+            mercenaryY-= .5f;
             //y+= 0.2f;
             //x+= hip * Math.sin(Math.toRadians(rotation));
             // y-= hip * Math.cos(Math.toRadians(rotation));
@@ -81,17 +85,17 @@ public class SlickBasicGame extends BasicGame{
         
         if(input.isKeyDown(Input.KEY_S))
         {
-            y+= .5f;
+            mercenaryY+= .5f;
         }
     }
  
     @Override
     public void render(GameContainer gc, Graphics g) throws SlickException
     {
-        land.draw(0, 0);
+        landImage.draw(0, 0);
         
-        mercenary.draw(x, y, scale);
-        zombie.draw(x1,y1,scale);
+        mercenaryImage.draw(mercenaryX, mercenaryY, scale);
+        zombieImage.draw(zombieX,zombieY,scale);
  
     }
 }

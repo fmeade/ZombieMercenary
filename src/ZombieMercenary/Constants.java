@@ -13,9 +13,14 @@ public class Constants
     protected final float zombieMovementY = 0.1f;
     protected final float mercenaryMovementX = 0.25f;
     protected final float mercenaryMovementY = 0.25f;
-    protected final float scale = 1;
+    protected final float scale = 2.0f;
     
     protected final float startX = 400;
     protected final float startY = 300;
+    
+    public float getScale()
+    {
+        return scale;
+    }
     
 }
