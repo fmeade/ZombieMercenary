@@ -63,24 +63,16 @@ public class SlickBasicGame extends BasicGame{
         if(input.isKeyDown(Input.KEY_A) && mercenaryImage.getHeight() <= 800)
         {
             mercenaryX-= .5f;
-            //plane.rotate(-0.2f * delta);
         }
  
         if(input.isKeyDown(Input.KEY_D) && mercenaryImage.getHeight() >= 0)
         {
             mercenaryX+= .5f;
-            //aplane.rotate(0.2f * delta);
         }
  
         if(input.isKeyDown(Input.KEY_W))
         {
-            //float hip = 0.4f * delta;
- 
-            //float rotation = plane.getRotation();
             mercenaryY-= .5f;
-            //y+= 0.2f;
-            //x+= hip * Math.sin(Math.toRadians(rotation));
-            // y-= hip * Math.cos(Math.toRadians(rotation));
         }
         
         if(input.isKeyDown(Input.KEY_S))
@@ -93,7 +85,6 @@ public class SlickBasicGame extends BasicGame{
     public void render(GameContainer gc, Graphics g) throws SlickException
     {
         landImage.draw(0, 0);
-        
         mercenaryImage.draw(mercenaryX, mercenaryY, scale);
         zombieImage.draw(zombieX,zombieY,scale);
  
